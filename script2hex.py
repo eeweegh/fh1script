@@ -1,3 +1,4 @@
+# got this from http://expert-sleepers.co.uk/downloads/fh1scripts/script2hex.py
 
 import sys, os, stat
 

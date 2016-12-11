@@ -1,0 +1,40 @@
+;;
+;; wyb's very own FH-1 script
+;; run 'make' to create compiled version
+;;
+FH-1 script v1
+;; always reset when a new device is inserted
+RST
+DEV:USB MIDI Interface
+;; specific part for bespeco USB MIDI interface
+;; only accept note input on channels 3 and 4
+MCV1:3:0-127:C0G1V2
+MCV2:4:0-127:C3G4V5
+;; disable note input on any other channel
+MCV3:
+MCV4:
+MCV5:
+MCV6:
+MCV7:
+MCV8:
+MCV9:
+MCV10:
+MCV11:
+MCV12:
+MCV13:
+MCV14:
+MCV15:
+MCV16:
+;; 4 ppqn clock trigger on port 8
+;;   full range square (CH5 CC103 127), 
+;;   very short duty cycle (CH7 CC103 02),
+;;   reset every clock (CH3 CC71 64),
+;;   centered around 0V (CH1 CC7 64)
+HEX b4 67 7F b6 67 02 b2 47 40 b0 07 40
+;; 24 ppqn clock trigger on port 7
+;;   full range square (CH5 CC102 127), 
+;;   very short duty cycle (CH7 CC102 02),
+;;   6 times internal clock speed (CH3 CC70 69),
+;;   centered around 0V (CH1 CC6 64)
+HEX b4 66 7f b6 66 02 b2 46 3f b0 06 45
+

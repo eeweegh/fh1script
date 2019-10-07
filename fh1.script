@@ -37,4 +37,23 @@ HEX b4 67 7F b6 67 02 b2 47 40 b0 07 40
 ;;   6 times internal clock speed (CH3 CC70 69),
 ;;   centered around 0V (CH1 CC6 64)
 HEX b4 66 7f b6 66 02 b2 46 3f b0 06 45
+;; Beatstep Pro:
+;; SEQ1 and SEQ2 PVGA on 1-4 and 5-8, resp
+;; DRUM triggers (actually gated velocities) on 9-16
+DEV:Arturia BeatStep Pro
+MCV1:1:0-127:C0G1V2A3
+MCV2:2:0-127:C4G5V6A7
+MCV3:10:36-36:v8
+MCV4:10:37-37:v9
+MCV5:10:38-38:v10
+MCV6:10:39-39:v11
+MCV7:10:40-40:v12
+MCV8:10:41-41:v13
+MCV9:10:42-42:v14
+MCV10:10:43-43:v15
+MCV11:
+MCV13:
+MCV14:
+MCV15:
+MCV16:
 
